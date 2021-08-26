@@ -12,6 +12,8 @@ cheatsheets_list <- cheatsheets_page %>%
 purrr::walk(cheatsheets_list, ~ download.file(url = paste0("https://github.com/rstudio/cheatsheets/raw/master/", .x),
               destfile = paste0(here::here("download/"), .x)))
 
+library(staplr)
+
 staplr::staple_pdf(
   input_directory = here::here("download"),
   output_filepath = here::here("all_cheatsheets.pdf")
