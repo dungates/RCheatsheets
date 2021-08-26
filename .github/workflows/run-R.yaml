@@ -38,6 +38,7 @@ jobs:
           sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
           sudo apt-get update
           sudo apt-get install r-cran-rjava
+          sudo R CMD javareconf
 
       - name: Query dependencies
         run: |
