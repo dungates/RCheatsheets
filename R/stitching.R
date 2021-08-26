@@ -1,3 +1,4 @@
+#' importFrom magrittr "%>%"
 
 cheatsheets_page <- rvest::read_html("https://github.com/rstudio/cheatsheets")
 
@@ -12,6 +13,6 @@ purrr::walk(cheatsheets_list, ~ download.file(url = paste0("https://github.com/r
               destfile = paste0(here::here("download/"), .x)))
 
 staplr::staple_pdf(
-  input_directory = here("download"),
-  output_filepath = here("all_cheatsheets")
+  input_directory = here::here("download"),
+  output_filepath = here::here("all_cheatsheets.pdf")
 )

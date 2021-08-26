@@ -50,7 +50,7 @@ jobs:
         
       - name: Generate data
         run: |
-          source("R/job.R")
+          source("R/stitching.R")
         shell: Rscript {0}
       
       - name: Commit files
@@ -58,7 +58,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add --all
-          git commit -am "add data"
+          git commit -am "install all scripts"
           git push 
           
       - name: Session info
