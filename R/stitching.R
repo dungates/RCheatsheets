@@ -1,4 +1,4 @@
-#' importFrom magrittr "%>%"
+library(magrittr)
 
 cheatsheets_page <- rvest::read_html("https://github.com/rstudio/cheatsheets")
 
