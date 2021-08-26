@@ -32,6 +32,11 @@ jobs:
         run: |
           sudo apt-get install libcurl4-openssl-dev
           sudo apt-get install libxml2-dev
+          
+      - name: Install r-cran-rjava
+        run: |
+          sudo add-apt-repository ppa:marutter/c2d4u3.5
+          sudo apt-get update
           sudo apt-get install r-cran-rjava
 
       - name: Query dependencies
