@@ -9,7 +9,7 @@ cheatsheets_list <- cheatsheets_page %>%
   stringr::str_replace_all(" ", "%20")
   
 
-purrr::walk(cheatsheets_list, ~ download.file(url = paste0("https://github.com/rstudio/cheatsheets/raw/master/", .x),
+purrr::walk(cheatsheets_list, ~ download.file(url = paste0("https://github.com/rstudio/cheatsheets/raw/main/", .x),
               destfile = paste0(here::here("download/"), .x)))
 
 library(staplr)
